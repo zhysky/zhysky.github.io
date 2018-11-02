@@ -7,7 +7,7 @@ body {
     background-image: url(/img/bg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center 0;
     background-attachment: fixed;
     /* box-shadow: 5px 5px 20px rgba(169, 169, 169, 0.5); */
 }
