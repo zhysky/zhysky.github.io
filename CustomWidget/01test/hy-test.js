@@ -1,41 +1,27 @@
 (function () {
     let template = document.createElement("template");
     template.innerHTML = `
-    	<style>
-		:host {
-			border-radius: 25px;
-			border-width: 4px;
-			border-color: black;
-			border-style: solid;
-			display: block;
-		}
+    <style>
+    .hy-test{
+        color: #2196F3;
+        border: 2px solid #806df7;
+        border-radius:5px;
+        width: 100px;
+        height: 50px;
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        background: #2bfdc3;
+    }
 	</style>
+    <div class="hy-test">test</div>
     `;
-    class ColoredBox extends HTMLElement {
+    class HyTest extends HTMLElement {
         constructor() {
             super();
             let shadowRoot = this.attachShadow({ mode: "open" });
             shadowRoot.appendChild(template.content.cloneNode(true));
-            this.addEventListener("click", event => {
-                var event = new Event("onClick");
-                this.dispatchEvent(event);
-            });
-            this._props = {};
-        }
-        onCustomWidgetBeforeUpdate(changedProperties) {
-            this._props = { ...this._props, ...changedProperties };
-        }
-        onCustomWidgetAfterUpdate(changedProperties) {
-            if ("color" in changedProperties) {
-                this.style["background-color"] = changedProperties["color"];
-            }
-            if ("opacity" in changedProperties) {
-                this.style["opacity"] = changedProperties["opacity"];
-            }
-            if ("table" in changedProperties) {
-                alert(changedProperties["table"]);
-            }
         }
     }
-    customElements.define("com-sap-sample-coloredbox", ColoredBox);
+    customElements.define("zhydn-github-github-hytest", HyTest);
 })();
