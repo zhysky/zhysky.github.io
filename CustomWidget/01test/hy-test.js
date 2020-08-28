@@ -23,5 +23,5 @@
             shadowRoot.appendChild(template.content.cloneNode(true));
         }
     }
-    customElements.define("zhydn-github-github-hytest", HyTest);
+    customElements.define("iamzhy-cf-hytest", HyTest);
 })();
