@@ -1,0 +1,50 @@
+{
+    "id": "com.sap.sample.coloredbox",
+    "version": "1.0.0",
+    "name": "Colored Box",
+    "description": "A colored box",
+    "newInstancePrefix": "ColoredBox",
+    "icon": "",
+    "vendor": "SAP",
+    "eula": "",
+    "license": "",
+    "webcomponents": [
+        {
+            "kind": "main",
+            "tag": "com-sap-sample-coloredbox",
+            "url": "https://project.benchmarkchina.com:30002/workshop/box/box.js",
+            "integrity": "",
+            "ignoreIntegrity": true
+        }
+    ],
+    "properties": {
+        "color": {
+            "type": "string",
+            "description": "Background color",
+            "default": "red"
+        }
+    },
+    "methods": {
+        "setColor": {
+            "description": "Sets the background color.",
+            "parameters": [
+                {
+                    "name": "newColor",
+                    "type": "string",
+                    "description": "The new background color"
+                }
+            ],
+            "body": "this.color = newColor;"
+        },
+        "getColor": {
+            "returnType": "string",
+            "description": "Returns the background color.",
+            "body": "return this.color;"
+        }
+    },
+    "events": {
+        "onClick": {
+            "description": "Called when the user clicks the Colored Box."
+        }
+    }
+}
